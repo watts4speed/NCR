@@ -2,8 +2,8 @@
 
 import torch
 import torch.nn.functional as F
-from models.BaseModel import BaseModel
-from utils import utils
+from src.models.BaseModel import BaseModel
+from src.utils import utils
 
 
 class RecModel(BaseModel):

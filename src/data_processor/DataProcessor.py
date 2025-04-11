@@ -1,13 +1,13 @@
 # coding=utf-8
 import copy
-from utils import utils
+from src.utils import utils
 import numpy as np
 import logging
 import pandas as pd
 from tqdm import tqdm
 import torch
 from collections import defaultdict
-from utils import global_p
+from src.utils import global_p
 
 
 class DataProcessor(object):

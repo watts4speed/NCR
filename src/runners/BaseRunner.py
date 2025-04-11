@@ -3,7 +3,7 @@
 import torch
 import logging
 from time import time
-from utils import utils, global_p
+from src.utils import utils, global_p
 from tqdm import tqdm
 import numpy as np
 import copy

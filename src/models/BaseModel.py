@@ -7,7 +7,7 @@ import numpy as np
 import torch.nn.functional as F
 import os
 import pandas as pd
-from utils.rank_metrics import *
+from src.utils.rank_metrics import *
 
 
 class BaseModel(torch.nn.Module):

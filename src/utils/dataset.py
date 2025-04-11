@@ -5,7 +5,7 @@ import os
 import numpy as np
 import socket
 from shutil import copyfile
-from utils import global_p
+from src.utils import global_p
 
 np.random.seed(2018)
 
