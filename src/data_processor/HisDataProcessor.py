@@ -185,14 +185,14 @@ class HisDataProcessor(DataProcessor):
             rows = length_dict[l]
             tmp_data = {}
             for key in data:
-                if data[key].dtype == np.object:
+                if data[key].dtype == np.object_:
                     tmp_data[key] = np.array([np.array(data[key][r]) for r in rows])
                 else:
                     tmp_data[key] = data[key][rows]
             tmp_neg_data = {} if train else None
             if train:
                 for key in self.data_columns:
-                    if data[key].dtype == np.object:
+                    if data[key].dtype == np.object_:
                         tmp_neg_data[key] = np.array([np.array(neg_data[key][r]) for r in rows])
                     else:
                         tmp_neg_data[key] = neg_data[key][rows]

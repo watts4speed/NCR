@@ -56,9 +56,9 @@ def format_metric(metric):
     if type(metric) is tuple or type(metric) is list:
         for m in metric:
             # print(type(m))
-            if type(m) is float or type(m) is np.float or type(m) is np.float32 or type(m) is np.float64:
+            if type(m) is float or type(m) is np.float32 or type(m) is np.float64:
                 format_str.append('%.4f' % m)
-            elif type(m) is int or type(m) is np.int or type(m) is np.int32 or type(m) is np.int64:
+            elif type(m) is int  or type(m) is np.int32 or type(m) is np.int64:
                 format_str.append('%d' % m)
     return ','.join(format_str)
 
