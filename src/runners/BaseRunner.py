@@ -141,10 +141,10 @@ class BaseRunner(object):
 
         model.eval()
         predictions = []
-        for batch in tqdm(batches, leave=False, ncols=100, mininterval=1, desc='Predict'):
+        for batch in tqdm(batches, leave=False, ncols=4, mininterval=1, desc='Predict'):
             # gc.collect()
             prediction = model.predict(batch)['prediction']
-            predictions.append(prediction.detach())
+            predictions.append(prediction.detach().cpu().numpy())
 
         predictions = np.concatenate(predictions)
         sample_ids = np.concatenate([b[global_p.K_SAMPLE_ID] for b in batches])
